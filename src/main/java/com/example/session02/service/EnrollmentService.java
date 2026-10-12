@@ -39,7 +39,6 @@ public class EnrollmentService {
         return enrollmentRepository.deleteById(id);
     }
 
-    // Kiểm tra khóa ngoại: khóa học có tồn tại không
     public boolean isCourseValid(Long courseId) {
         return courseId != null && courseService.getCourseById(courseId) != null;
     }
