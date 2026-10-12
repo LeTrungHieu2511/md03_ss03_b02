@@ -39,7 +39,6 @@ public class CourseService {
         return courseRepository.deleteById(id);
     }
 
-    // Kiểm tra khóa ngoại: giảng viên có tồn tại không
     public boolean isInstructorValid(Long instructorId) {
         return instructorId != null && instructorService.getInstructorById(instructorId) != null;
     }
